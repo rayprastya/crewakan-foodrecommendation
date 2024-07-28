@@ -1,0 +1,7 @@
+app:
+  port: 8000
+  environment: development
+  log_level: debug
+
+openai:
+  api_key: "your_openai_api_key"

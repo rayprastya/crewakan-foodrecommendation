@@ -1,0 +1,110 @@
+body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .login {
+      max-width: 700px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 50px;
+      border-radius: 30px;
+      width: 100%;
+  }
+    
+    /* Style for form labels */
+    label {
+      display: block;
+      margin-bottom: 3px;
+      margin-left: 3px;
+      font-weight: bold;
+    }
+    label::after {
+      display: none;
+      content: '';
+    }
+    
+    /* Style for form inputs */
+    input:not([type='checkbox'])  {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 5px;
+      border: .8px solid #ccc;
+      border-radius: 20px;
+      box-sizing: border-box;
+      padding-left: 20px;
+    }
+    
+    p:has(> input#id_remember) {
+      display: flex;
+      justify-content: start;
+      gap: 0px;
+      /* flex-direction: row-reverse; */
+    }
+    label[for="id_remember"] {
+      padding-right: 10px;
+    }
+    #id_remember {
+      align-self: center;
+      align-items: baseline;
+      margin: 0;
+      width: 20px;
+    }
+    /* Style for the Forgot Password link */
+    .helptext {
+      display: block;
+      margin-top: 8px;
+      font-size: 12px;
+      color: #555;
+    }
+    
+    /* Style for the submit button */
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    /* Optional: Style for a general error message */
+    .error-message {
+      color: #ff0000;
+      margin-top: 8px;
+    }
+  
+    .text-header {
+      font-size: 30px;
+    }
+    .text-body {
+      font-size: 14px;
+    }
+    @media screen and (max-width: 768px) {
+      .login {
+        border-radius: 0px;
+        padding: 30px;
+      }
+      .text-header {
+        font-size: 14px;
+      }
+      .text-body {
+        font-size: 10px;
+      }
+      input {
+        padding: 3px;
+        margin-bottom: 5px;
+      }
+      label {
+        margin-bottom: 3px;
+      }
+      li {
+        font-size: 8px;
+        font-weight: 200;
+      }
+    }

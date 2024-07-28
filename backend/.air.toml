@@ -1,0 +1,29 @@
+# .air.toml configuration for app/main.go
+
+# Root directory for the project
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  # Command to build your application
+  cmd = "go build -o ./tmp/main.exe ./app"
+  bin = "tmp/main.exe"
+  delay = 1000 # ms
+  log = "build.log"
+  include_ext = ["go"]
+  exclude_dir = ["assets", "tmp"]
+  exclude_ext = ["swp", "log", "tmp"]
+  follow_symlink = true
+
+[log]
+  color = true
+  timestamp = true
+
+[server]
+  host = "0.0.0.0"
+  port = 9090
+  app_root = "."
+
+[script]
+  before_build = "echo Before Build"
+  after_build = "echo After Build"
